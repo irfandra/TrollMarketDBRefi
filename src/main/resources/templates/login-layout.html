@@ -1,11 +1,61 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head></head>
-<body>
-    <header th:fragment="header" class="company-logo">
-        <img th:src="@{/resources/image/logo.png}" alt="Basilisk">
-        <h1>Trade of <span class="bold">basilisk</span></h1>
-    </header>
 
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head th:fragment="head">
+    <title>TrollMarket</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+   
+    <link rel="stylesheet" th:href="@{/css/login.css}"/>
+    <link rel="stylesheet" href="../static/css/login.css">
+    <link rel="icon" href="@{/image/TrollMarket.jpg" type="image/ico"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="../static/js/login.js" defer> </script>
+    <script th:src="@{js/login.js}" defer></script>
+    <script th:src="@{/js/site.js}" defer></script>
+    <script th:src="@{/js/jquery-3.6.0.min.js}" defer></script>
+</head>
+<body>
+    
+
+<div id="container">
+    <h1>TROLL MARKET</h1>
+    <div id="tabs">
+        <p id="lt" class="tabs" onclick="loginTabFun()">Log in</p>
+        <p id="rt" class="tabs" onclick="regTabFun()">Register</p>
+        <div id="clear"></div>
+    </div>   
+        <div id="login" class="comm">
+            <h3>Sign in</h3>
+            <input id="se" type="email" placeholder="Email" required/>
+            <input id="sp" type="password" placeholder="Password" required/>
+            <input type="submit" onclick="login()" value="Submit"/>
+
+            <p onclick="forTabFun()">Forget Password?</p>
+        </div>
+        <div id="register" class="comm">
+            <h3>Register</h3>
+
+            <input id="re" type="email" placeholder="Email" required/>
+            <input id="rp" type="password" placeholder="Password" required/>
+            <input id="rrp" type="password" placeholder="Re write Password" required/>
+            <input type="submit" onclick="register()" value="Submit"/>
+
+        </div >
+        <div id="forgot" class="comm">
+        <h3>Forgot Password</h3>
+        <div>
+            <input id="fe" type="email" placeholder="Email" required/>
+            <input type="submit" onclick="forgot()" value="Submit"/>
+        </div>
+        </div>
+    
+</div>
 </body>
-</html>
+
+<script>
+   
+</script>
