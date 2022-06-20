@@ -8,6 +8,11 @@ var forgetBox = document.getElementById("forgot");
 var loginTab = document.getElementById("lt");
 var regTab = document.getElementById("rt");
 
+const ltBtn = document.getElementById("lt");
+const rtBtn = document.getElementById("rt");
+
+ltBtn.addEventListener("click", loginTabFun);
+rtBtn.addEventListener("click", regTabFun)
 function regTabFun(){
     event.preventDefault();
 
