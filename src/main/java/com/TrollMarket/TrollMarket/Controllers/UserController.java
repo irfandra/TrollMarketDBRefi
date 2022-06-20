@@ -31,6 +31,7 @@ public class UserController {
         return "login-layout";
     }
 
+
     @GetMapping("access-denied")
     public String accessDenied() {
         return "account/access-denied";
@@ -44,6 +45,8 @@ public class UserController {
         model.addAttribute("account", dto);
         return "account/register-form";
     }
+
+
 
     @PostMapping("register")
     public String register(@Valid @ModelAttribute("user") RegisterDTO dto,
